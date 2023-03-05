@@ -1,0 +1,93 @@
+#film{
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    .row{
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 5rem;
+        margin: auto;
+        .picture{
+            grid-column: 1/3;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content{
+            grid-column: 3/7;
+            h2{
+                font-size: 3.2rem;
+                font-weight: 500;
+                color: #9966cc;
+            }
+            .date{
+                padding-top: 1rem;
+            }
+            .description{
+                padding-top: 3rem;
+                font-size: 1.6rem;
+            }
+        }
+        .side{
+            grid-column: 7/9;
+            .btn{
+                font-size: 1.5rem;
+                font-weight: 500;
+                padding: 1.5rem 2rem;
+                margin-bottom: 2rem;
+                border-radius: 0.5rem;
+                background: #663399;
+                text-align: center;
+                cursor: pointer;
+                transition: 0.25s;
+                &:hover{
+                    background: #432164;
+                }
+                &.grey{
+                    background: #333;
+                    &:hover{
+                        background: #222;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    #film{
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        .row{
+            grid-gap: 1rem;
+            .picture{
+                grid-column: 1/9;
+                padding-bottom: 2rem;
+                img{
+                    width: 70%;
+                    height: 100%;
+                    margin: auto;
+                }
+            }
+            .content{
+                grid-column: 1/9;
+                h2{
+                    font-size: 2.2rem;
+                }
+                .date{
+                    font-size: 1.4rem;
+                    padding-top: 0.5rem;
+                }
+                .description{
+                    padding: 2rem 0;
+                    font-size: 1.4rem;
+                }
+            }
+            .side{
+                grid-column: 1/9;
+            }
+        }
+    }
+}

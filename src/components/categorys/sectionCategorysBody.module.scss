@@ -1,0 +1,104 @@
+#categorys{
+    padding-top: 10rem;
+
+    .galery{
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1.5rem;
+        margin: auto;
+        .wraper{
+            text-align: center;
+            background: #111;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            img{
+                display: block;
+                width: 100%;
+                object-fit: cover;
+            }
+            .info{
+                padding: 0.75rem;
+                h2{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+            .overlay{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0.2rem;
+                background: #222;
+                padding: 1rem;
+                text-align: left;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.25s;
+                h2{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                p{
+                    font-size: 1.4rem;
+                    padding: 0.5rem 0 1rem 0;
+                }
+            }
+            &:hover{
+                .overlay{
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 575.98px) {
+    #categorys{
+        padding-top: 7rem;
+        .galery{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #categorys{
+        .galery{
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 3rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #categorys{
+        .galery{
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2.5rem;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #categorys{
+        .galery{
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2.5rem;
+        }
+    }
+}
